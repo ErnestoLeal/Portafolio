@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card card-body h-100 border-info" id="profile-wrapper">
-                    <img id="profile-pic" src="{% static 'mediafiles/profilepicture.jpg' %}">
+                    <img id="profile-pic" src="{{ MEDIA_URL }}profilepicture.jpg" alt="Profile Picture">
                     <hr>
                     <h4> Hi, Im Ernesto!</h4>
                     <p>I love coding, developing and engineering</p>
@@ -34,8 +34,8 @@
                         With experience in both technical and leadership roles, I enjoy collaborating with teams to bring ideas to life. I have led initiatives in education, teaching martial arts to students, which has sharpened my communication and mentoring skills. I am always eager to embrace new challenges and learn from them, aiming to contribute meaningfully to projects that make a positive impact in the world.
                     </p>
                     <ul class="social-links">
-                        <li><img class="social" src="{% static 'mediafiles/linkedin.png' %}"></li>
-                        <li><img class="social" src="{% static 'mediafiles/github.png' %}"></li>
+                        <img class="social" src="{{ MEDIA_URL }}linkedin.png" alt="linkedin">
+                        <img class="social" src="{{ MEDIA_URL }}github.png" alt="github">
                     </ul>
                 </div>
             </div>
