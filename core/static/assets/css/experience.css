@@ -1,0 +1,82 @@
+/* General Styling for Experience Page */
+.experience-entry {
+    margin-bottom: 2rem; /* Add spacing between entries */
+}
+
+/* Company Name Styling */
+.experience-entry h2 {
+    font-size: 1.5rem; /* Slightly smaller than the main header */
+    font-weight: bold; /* Ensure bold styling */
+    margin-bottom: 0.5rem;
+    color: inherit; /* Use the default color from main.css */
+}
+
+/* Job Title and Date Styling */
+.experience-entry p {
+    font-size: 1rem;
+    margin: 0.2rem 0 1rem;
+    line-height: 1.5;
+    color: inherit; /* Inherit color from main.css */
+}
+
+.experience-entry .date {
+    font-size: 0.9rem;
+    font-style: italic; /* Differentiate dates */
+    color: #666; /* Subtle gray tone for the dates */
+}
+
+/* List Styling */
+.experience-entry ul {
+    list-style-type: disc; /* Use traditional bullet points */
+    margin-left: 1.5rem; /* Add left padding for alignment */
+    padding-left: 0; /* Prevent overriding main.css */
+}
+
+.experience-entry ul li {
+    margin-bottom: 0.5rem; /* Space between list items */
+    font-size: 0.95rem; /* Slightly smaller for professional appearance */
+    color: inherit; /* Use default font color */
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 1.5rem 0; /* Add spacing above and below */
+}
+
+/* Call-to-Action (CTA) Section */
+.cta {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 1rem; /* Add space between buttons */
+    margin-top: 2rem; /* Space above the section */
+}
+
+.cta .button.primary {
+    background-color: #212931; /* Matches site theme */
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta .button.primary:hover {
+    background-color: #444; /* Subtle hover effect */
+}
+
+.cta .button {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    color: #212931;
+    border: 1px solid #212931;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.cta .button:hover {
+    background-color: #212931;
+    color: #fff;
+}

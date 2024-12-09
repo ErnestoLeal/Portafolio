@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ernesto - Skills</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/skills.css' %}" />
+    <noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="{% url 'home' %}" class="logo">Skills</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'experience' %}">Experience</a></li>
+                <li class="active"><a href="{% url 'skills' %}">Skills</a></li>
+                <li><a href="{% url 'contactme' %}">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <section class="post">
+                <header class="major">
+                    <h1>My Skillset</h1>
+                    <p>A diverse set of skills tailored for problem-solving and creating impact.</p>
+                </header>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid">
+                    <div class="skill">
+                        <h2>Programming Languages</h2>
+                        <ul>
+                            <li>Python</li>
+                            <li>C++, C#</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                            <li>HTML & CSS</li>
+                        </ul>
+                    </div>
+                    <div class="skill">
+                        <h2>Frameworks & Tools</h2>
+                        <ul>
+                            <li>Django</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>MATLAB</li>
+                            <li>Power BI</li>
+                        </ul>
+                    </div>
+                    <div class="skill">
+                        <h2>Machine Learning</h2>
+                        <ul>
+                            <li>Scikit-learn</li>
+                            <li>TensorFlow</li>
+                            <li>Pandas & NumPy</li>
+                            <li>Data Visualization</li>
+                            <li>Model Deployment</li>
+                        </ul>
+                    </div>
+                    <!--<div class="skill">
+                        <h2>Soft Skills</h2>
+                        <ul>
+                            <li>Leadership</li>
+                            <li>Communication</li>
+                            <li>Teamwork</li>
+                            <li>Problem-Solving</li>
+                            <li>Time Management</li>
+                        </ul>
+                    </div>!-->
+                </div>
+
+                <!-- Call to Action -->
+                <div class="cta">
+					<a href="{% static 'docs/CV.pdf' %}" class="button primary" download target="_blank">Download My CV</a>
+                    <a href="{% url 'contactme' %}" class="button">Contact Me</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'assets/js/browser.min.js' %}"></script>
+    <script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/util.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Scroll down slightly when the page loads
+			window.scrollTo({
+				top: 550, // Adjust this value to control how far it scrolls
+				behavior: "smooth"
+			});
+		});
+	</script>
+	
+</body>
+</html>

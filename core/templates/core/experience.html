@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Ernesto - Experience</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+    <noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="{% static 'docs/CV.pdf' %}" class="logo" download target="_blank" rel="noopener noreferrer">My CV</a>
+        </header>
+
+        <!-- Navigation -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="active"><a href="{% url 'experience' %}">Experience</a></li>
+                <li><a href="{% url 'skills' %}">Skills</a></li>
+                <li><a href="{% url 'contactme' %}">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <header class="major">
+                <h1>My Experience</h1>
+                <p>Highlighting impactful roles and contributions throughout my journey.</p>
+            </header>
+
+            <!-- Experience Section -->
+            <section class="experience">
+                <article class="experience-entry">
+                    <h2>Finlet (Tech Start-Up)</h2>
+                    <p class="job-title">Founder & CEO <span class="date">Current</span></p>
+                    <ul>
+                        <li>Developed a biometric payment system enabling fingerprint-based transactions, serving over 1,000 users.</li>
+                        <li>Reduced payment processing time by 25% through an optimized backend architecture using Django and AWS services.</li>
+                        <li>Integrated secure R307 fingerprint hardware, achieving 99.9% authentication accuracy.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-entry">
+                    <h2>Center for Additive Metal Printing (IDEE)</h2>
+                    <p class="job-title">Thermographic Data Engineer <span class="date">Current</span></p>
+                    <ul>
+                        <li>Improved 3D printing precision by 15% through real-time Python-based thermal data analysis.</li>
+                        <li>Optimized laser control efficiency by 20% using advanced C# algorithms.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-entry">
+                    <h2>Schneider Electric</h2>
+                    <p class="job-title">Software & AI Engineer <span class="date">2023</span></p>
+                    <ul>
+                        <li>Implemented AI-driven digital twin simulations, reducing product design validation time by 30%.</li>
+                        <li>Enhanced data pipelines with Python and SQL, boosting operational data processing by 25%.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta">
+                <ul class="actions">
+                    <li><a href="{% static 'docs/CV.pdf' %}" class="button primary" download>Download My CV</a></li>
+                    <li><a href="{% url 'contactme' %}" class="button">Contact Me</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Address</h3>
+                    <p>Schweinfurt, Bavaria, Germany</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+4915901064644">+49 159010 64644</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="mailto:ernestolealislazamora@gmail.com">ernestolealislazamora@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons">
+                        <li><a href="https://github.com/ErnestoLeal" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+                        <li><a href="https://www.instagram.com/ernestorelentless" class="icon brands fa-instagram" target="_blank" rel="noopener noreferrer"><span class="label">Instagram</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'assets/js/browser.min.js' %}"></script>
+    <script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/util.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>
