@@ -39,7 +39,7 @@
 						<section class="post">
 							<header class="major">
 								<h1>Contact Me</h1>
-								<p>I'd love to hear from you! Feel free to reach out using the contact details below.</p>
+								<p>Let's collaborate! I'd be happy to assist with your project or answer any questions you may have.</p>
 							</header>
 						</section>
 					</div>
@@ -99,6 +99,35 @@
 			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
 			<script src="{% static 'assets/js/util.js' %}"></script>
 			<script src="{% static 'assets/js/main.js' %}"></script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					const scrollTarget = 600; // Adjust this value to control the final scroll position
+					const scrollDuration = 1000; // Adjust this value to control the speed (in milliseconds)
+					
+					const start = window.scrollY;
+					const distance = scrollTarget - start;
+					const startTime = performance.now();
+			
+					function smoothScroll(currentTime) {
+						const elapsedTime = currentTime - startTime;
+						const progress = Math.min(elapsedTime / scrollDuration, 1); // Ensure it stops at 1
+			
+						// Easing function (ease-in-out)
+						const easeInOutQuad = progress < 0.5
+							? 2 * progress * progress
+							: -1 + (4 - 2 * progress) * progress;
+			
+						// Calculate the current scroll position
+						window.scrollTo(0, start + distance * easeInOutQuad);
+			
+						if (elapsedTime < scrollDuration) {
+							requestAnimationFrame(smoothScroll);
+						}
+					}
+			
+					requestAnimationFrame(smoothScroll);
+				});
+			</script>
 
 	</body>
 </html>

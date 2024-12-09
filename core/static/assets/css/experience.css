@@ -80,3 +80,12 @@ hr {
     background-color: #212931;
     color: #fff;
 }
+
+.date {
+    margin-left: auto;
+    font-style: normal; /* Ensure default style for other dates */
+}
+
+.date em {
+    font-style: italic; /* Italicize "Current" */
+}

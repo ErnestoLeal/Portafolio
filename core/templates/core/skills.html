@@ -27,6 +27,12 @@
                 <li class="active"><a href="{% url 'skills' %}">Skills</a></li>
                 <li><a href="{% url 'contactme' %}">Contact Me</a></li>
             </ul>
+			<ul class="icons">
+				<!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>!-->
+				<li><a href="https://www.instagram.com/ernestorelentless" class="icon brands fa-instagram" target="_blank" rel="noopener noreferrer"><span class="label">Instagram</span></a></li>
+				<li><a href="https://github.com/ErnestoLeal" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+			</ul>
         </nav>
 
         <!-- Main -->
@@ -100,11 +106,31 @@
     <script src="{% static 'assets/js/main.js' %}"></script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			// Scroll down slightly when the page loads
-			window.scrollTo({
-				top: 550, // Adjust this value to control how far it scrolls
-				behavior: "smooth"
-			});
+			const scrollTarget = 550; // Adjust this value to control the final scroll position
+			const scrollDuration = 1000; // Adjust this value to control the speed (in milliseconds)
+			
+			const start = window.scrollY;
+			const distance = scrollTarget - start;
+			const startTime = performance.now();
+	
+			function smoothScroll(currentTime) {
+				const elapsedTime = currentTime - startTime;
+				const progress = Math.min(elapsedTime / scrollDuration, 1); // Ensure it stops at 1
+	
+				// Easing function (ease-in-out)
+				const easeInOutQuad = progress < 0.5
+					? 2 * progress * progress
+					: -1 + (4 - 2 * progress) * progress;
+	
+				// Calculate the current scroll position
+				window.scrollTo(0, start + distance * easeInOutQuad);
+	
+				if (elapsedTime < scrollDuration) {
+					requestAnimationFrame(smoothScroll);
+				}
+			}
+	
+			requestAnimationFrame(smoothScroll);
 		});
 	</script>
 	
